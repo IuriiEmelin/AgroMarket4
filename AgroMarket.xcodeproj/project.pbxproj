@@ -20,6 +20,8 @@
 		07E6BB492A2E737F003D65B8 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6BB482A2E737F003D65B8 /* ProductDetailsViewController.swift */; };
 		07E6BB4B2A2E73AC003D65B8 /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6BB4A2A2E73AC003D65B8 /* NewProductViewController.swift */; };
 		07E6BB4D2A2E7B0F003D65B8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6BB4C2A2E7B0F003D65B8 /* TabBarController.swift */; };
+		8FC0E77D2A2E8E79006A2744 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0E77C2A2E8E79006A2744 /* Product.swift */; };
+		8FC0E7802A2E8ECC006A2744 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		07E6BB482A2E737F003D65B8 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		07E6BB4A2A2E73AC003D65B8 /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		07E6BB4C2A2E7B0F003D65B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8FC0E77C2A2E8E79006A2744 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = AgroMarket/Product.swift; sourceTree = SOURCE_ROOT; };
+		8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		07E6BB222A2E6C5F003D65B8 /* AgroMarket */ = {
 			isa = PBXGroup;
 			children = (
+				8FC0E77E2A2E8EB5006A2744 /* Services */,
 				07E6BB372A2E6C77003D65B8 /* App */,
 				07E6BB3A2A2E6C93003D65B8 /* Models */,
 				07E6BB382A2E6C81003D65B8 /* Storyboards */,
@@ -109,6 +114,7 @@
 		07E6BB3A2A2E6C93003D65B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8FC0E77C2A2E8E79006A2744 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +132,14 @@
 				07E6BB4A2A2E73AC003D65B8 /* NewProductViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8FC0E77E2A2E8EB5006A2744 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +216,10 @@
 				07E6BB3D2A2E6E53003D65B8 /* LoginViewController.swift in Sources */,
 				07E6BB3F2A2E6E7E003D65B8 /* TeamViewController.swift in Sources */,
 				07E6BB472A2E7030003D65B8 /* AccountViewController.swift in Sources */,
+				8FC0E7802A2E8ECC006A2744 /* DataStorage.swift in Sources */,
 				07E6BB4D2A2E7B0F003D65B8 /* TabBarController.swift in Sources */,
 				07E6BB4B2A2E73AC003D65B8 /* NewProductViewController.swift in Sources */,
+				8FC0E77D2A2E8E79006A2744 /* Product.swift in Sources */,
 				07E6BB432A2E6F15003D65B8 /* CategoryListViewController.swift in Sources */,
 				07E6BB242A2E6C5F003D65B8 /* AppDelegate.swift in Sources */,
 				07E6BB452A2E6F69003D65B8 /* ProductsListViewController.swift in Sources */,
@@ -355,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6PNGGFV6BC;
+				DEVELOPMENT_TEAM = M9QM497LW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AgroMarket/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -383,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6PNGGFV6BC;
+				DEVELOPMENT_TEAM = M9QM497LW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AgroMarket/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
