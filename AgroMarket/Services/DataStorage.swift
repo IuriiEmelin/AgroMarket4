@@ -17,7 +17,7 @@ final class DataStorage {
     
     let fruitNames = ["Абрикос", "Груша", "Слива"]
     
-    let vegetableNamea = ["Морковь", "Помидор", "Лук"]
+    let vegetableNames = ["Морковь", "Помидор", "Лук"]
     
     private init() {}
 }

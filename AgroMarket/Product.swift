@@ -53,7 +53,7 @@ extension Product {
 //        let categories = DataStorage.shared.categories
         let meatNames = DataStorage.shared.meatNames
         let fruitNames = DataStorage.shared.fruitNames
-        let vegetableNames = DataStorage.shared.vegetableNamea
+        let vegetableNames = DataStorage.shared.vegetableNames
         
         for category in Category.allCases {
             
