@@ -40,7 +40,7 @@
 		07E6BB482A2E737F003D65B8 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		07E6BB4A2A2E73AC003D65B8 /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		07E6BB4C2A2E7B0F003D65B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		8FC0E77C2A2E8E79006A2744 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = AgroMarket/Product.swift; sourceTree = SOURCE_ROOT; };
+		8FC0E77C2A2E8E79006A2744 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = AgroMarket/Model/Product.swift; sourceTree = SOURCE_ROOT; };
 		8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,9 +74,9 @@
 		07E6BB222A2E6C5F003D65B8 /* AgroMarket */ = {
 			isa = PBXGroup;
 			children = (
+				8FC0E7812A2FA1E2006A2744 /* Models */,
 				8FC0E77E2A2E8EB5006A2744 /* Services */,
 				07E6BB372A2E6C77003D65B8 /* App */,
-				07E6BB3A2A2E6C93003D65B8 /* Models */,
 				07E6BB382A2E6C81003D65B8 /* Storyboards */,
 				07E6BB3B2A2E6C99003D65B8 /* View Controllers */,
 				07E6BB392A2E6C8A003D65B8 /* Resources */,
@@ -111,14 +111,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		07E6BB3A2A2E6C93003D65B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8FC0E77C2A2E8E79006A2744 /* Product.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		07E6BB3B2A2E6C99003D65B8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +132,14 @@
 				8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8FC0E7812A2FA1E2006A2744 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FC0E77C2A2E8E79006A2744 /* Product.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

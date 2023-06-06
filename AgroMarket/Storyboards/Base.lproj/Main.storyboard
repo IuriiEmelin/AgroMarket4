@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-fL-Y6r">
-                                <rect key="frame" x="159" y="625" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-fL-Y6r">
+                                <rect key="frame" x="160" y="581" width="73" height="35"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                 <connections>
                                     <segue destination="RcN-r4-5ff" kind="show" id="dte-7f-AXe"/>
                                 </connections>
@@ -34,9 +34,30 @@
                                     <segue destination="ZQg-3r-lB4" kind="show" id="4lJ-F1-cQc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujF-jj-2eq">
+                                <rect key="frame" x="100" y="407" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orf-pq-khw">
+                                <rect key="frame" x="100" y="343" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="orf-pq-khw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="18W-Ab-S3q"/>
+                            <constraint firstItem="kUo-fL-Y6r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="3k1-Q4-NVM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUo-fL-Y6r" secondAttribute="trailing" constant="160" id="6dv-Tf-A3S"/>
+                            <constraint firstItem="orf-pq-khw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Dc9-uu-cqd"/>
+                            <constraint firstItem="ujF-jj-2eq" firstAttribute="top" secondItem="orf-pq-khw" secondAttribute="bottom" constant="30" id="E5n-w3-xsq"/>
+                            <constraint firstItem="kUo-fL-Y6r" firstAttribute="top" secondItem="ujF-jj-2eq" secondAttribute="bottom" constant="140" id="Hr8-PG-DSL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ujF-jj-2eq" secondAttribute="trailing" constant="100" id="QSz-Qc-Sam"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="orf-pq-khw" secondAttribute="trailing" constant="100" id="h6t-fF-Tp6"/>
+                            <constraint firstItem="ujF-jj-2eq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="qpc-HS-N4y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HXA-3C-R5z"/>
                 </viewController>
@@ -241,6 +262,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
