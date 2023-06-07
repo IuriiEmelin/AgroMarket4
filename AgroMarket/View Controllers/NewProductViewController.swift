@@ -8,5 +8,6 @@
 import UIKit
 
 class NewProductViewController: UIViewController {
+    // Здесь будет код по добавлению новой позиции продавца в маркете
 
 }
