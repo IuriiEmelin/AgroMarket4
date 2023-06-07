@@ -9,11 +9,8 @@ import UIKit
 
 final class CategoryListViewController: UITableViewController {
     
-    var products: [Product]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var user: User?
+    var products: [Product]?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Category.allCases.count
