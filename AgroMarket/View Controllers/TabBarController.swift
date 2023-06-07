@@ -15,8 +15,6 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         transferData()
-        
-        print(user)
     }
     
     private func transferData() {
