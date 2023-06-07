@@ -22,7 +22,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                 <connections>
-                                    <segue destination="RcN-r4-5ff" kind="show" id="dte-7f-AXe"/>
+                                    <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXm-MD-nPI"/>
+                                    <segue destination="RcN-r4-5ff" kind="show" identifier="ShowCategoryList" id="dte-7f-AXe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-Bw-EiN">
@@ -49,6 +50,9 @@
                                 <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
+                                <connections>
+                                    <action selector="didTapForgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohg-OY-OQA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Агро Маркет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFv-NW-qJq">
                                 <rect key="frame" x="130" y="113" width="133" height="34"/>
