@@ -159,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="8675.5725190839694" y="-853.52112676056345"/>
         </scene>
-        <!--Category-->
+        <!--Категория-->
         <scene sceneID="Q69-Kt-doV">
             <objects>
                 <tableViewController id="Nlg-Za-nAo" customClass="CategoryListViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
@@ -175,9 +175,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="bd6-Y6-crx" kind="show" id="r1G-6a-glH"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -185,7 +182,10 @@
                             <outlet property="delegate" destination="Nlg-Za-nAo" id="Dzj-OK-Nxt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Category" id="IT4-J0-BvT"/>
+                    <navigationItem key="navigationItem" title="Категория" id="IT4-J0-BvT"/>
+                    <connections>
+                        <segue destination="bd6-Y6-crx" kind="show" identifier="ShowProductsScreen" id="eXP-fU-QNu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-i1-r12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,11 +267,11 @@
             </objects>
             <point key="canvasLocation" x="3717" y="12"/>
         </scene>
-        <!--Category-->
+        <!--Категория-->
         <scene sceneID="y8c-Wp-7RN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gdm-yB-NqG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Category" id="h81-ZI-RnU"/>
+                    <tabBarItem key="tabBarItem" title="Категория" id="h81-ZI-RnU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hEE-kc-wWQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
