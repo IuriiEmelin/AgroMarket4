@@ -16,6 +16,13 @@ final class DataStorage {
         User(username: "buyer1", password: "pass2", type: .buyer, company: Company(companyName: "Компания2", region: "Санкт-Петербург", type: .resale))
     ]
     
+    let companies: [Company] = [
+        Company(companyName: "Газ-мяс", region: "70", type: .meat),
+        Company(companyName: "ИП Иванов", region: "Тула", type: .vegetable),
+        Company(companyName: "Агро", region: "Бердск", type: .fruit),
+        Company(companyName: "ЗАО Дунай", region: "Кузовлево", type: .resale)
+    ]
+    
     let categories = ["Мясо" , "Фрукты", "Овощи"]
     
     let meatNames = ["Говядина", "Баранина", "Птица"]

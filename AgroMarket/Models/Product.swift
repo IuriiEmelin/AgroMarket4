@@ -11,7 +11,7 @@ struct Product {
     let price: Int
     let quantity: Int
     let category: Category
-//    let company: Company  // TODO: Гамзат
+    let company: Company
 }
 
 enum Category: String, CaseIterable {
@@ -29,19 +29,32 @@ extension Product {
         let meatNames = DataStorage.shared.meatNames
         let fruitNames = DataStorage.shared.fruitNames
         let vegetableNames = DataStorage.shared.vegetableNames
+        let companies = DataStorage.shared.companies
         
         for meatName in meatNames {
-            let meatProduct = Product(name: meatName, price: Int.random(in: 100...10000), quantity: Int.random(in: 0...1000), category: .meat)
+            let meatProduct = Product(name: meatName,
+                                      price: Int.random(in: 100...10000),
+                                      quantity: Int.random(in: 0...1000),
+                                      category: .meat,
+                                      company: companies.randomElement() ?? Company(companyName: "unknown", region: "unknown", type: .resale))
             products.append(meatProduct)
         }
         
         for fruitName in fruitNames {
-            let fruitProduct = Product(name: fruitName, price: Int.random(in: 100...10000), quantity: Int.random(in: 0...1000), category: .fruits)
+            let fruitProduct = Product(name: fruitName,
+                                       price: Int.random(in: 100...10000),
+                                       quantity: Int.random(in: 0...1000),
+                                       category: .fruits,
+                                       company: companies.randomElement() ?? Company(companyName: "unknown", region: "unknown", type: .resale))
             products.append(fruitProduct)
         }
         
         for vegetableName in vegetableNames {
-            let vegetableProduct = Product(name: vegetableName, price: Int.random(in: 100...10000), quantity: Int.random(in: 0...1000), category: .vegetables)
+            let vegetableProduct = Product(name: vegetableName,
+                                           price: Int.random(in: 100...10000),
+                                           quantity: Int.random(in: 0...1000),
+                                           category: .vegetables,
+                                           company: companies.randomElement() ?? Company(companyName: "unknown", region: "unknown", type: .resale))
             products.append(vegetableProduct)
         }
         
