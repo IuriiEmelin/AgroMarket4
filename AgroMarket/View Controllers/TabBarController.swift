@@ -9,7 +9,8 @@ import UIKit
 
 final class TabBarController: UITabBarController {
 
-    var user: User?
+    var users: [User]!
+    var currentUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,7 @@ final class TabBarController: UITabBarController {
         guard let categoryNavigationController = viewControllers.first as? UINavigationController else { return }
         guard let categoryListVC = categoryNavigationController.topViewController as? CategoryListViewController else { return }
         
-        let products = Product.getProducts()
-        categoryListVC.products = products
-        categoryListVC.user = user
+        categoryListVC.currentUser = currentUser
+        categoryListVC.users = users
     }
 }

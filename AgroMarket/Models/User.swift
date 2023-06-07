@@ -7,33 +7,68 @@
 
 import Foundation
 
-enum UserType: String {
-    case buyer = "Покупатель"
-    case seller = "Продавец"
-}
-
-enum CompanyType: String {
-    case meat = "Скотоводство"
-    case vegetable = "Овощеводство"
-    case fruit = "Плодоводство"
-    case resale = "Перепродажа"
-}
-
 struct User {
     let username: String
     let password: String
+    let id: Int
     let type: UserType
     let company: Company
 }
 
+enum UserType: String, CaseIterable {
+    case buyer = "Покупатель"
+    case seller = "Продавец"
+}
+
 struct Company {
-    let companyName: String
+    let name: String
     let region: String
-    let type: CompanyType
 }
 
 extension User {
     static func getUsers() -> [User] {
-        DataStorage.shared.users
+        let usernames = DataStorage.shared.usernames
+        let passwords = DataStorage.shared.passwords
+        let userTypes = UserType.allCases.shuffled()
+        
+        
+        
+        var users: [User] = []
+        let companies = Company.getCompanies()
+        
+       
+        
+        for index in 0..<usernames.count {
+            let user = User(
+                username: usernames[index],
+                password: passwords[index],
+                id: index + 1,
+                type: userTypes[index],
+                company: companies[index]
+            )
+            users.append(user)
+        }
+        
+        return users
+    }
+}
+
+extension Company {
+    static func getCompanies() -> [Company] {
+        let companyNames = DataStorage.shared.companyNames.shuffled()
+        let regions = DataStorage.shared.regions.shuffled()
+        
+        var companies: [Company] = []
+        
+        for index in 0..<companyNames.count {
+            companies.append(
+                Company(
+                    name: companyNames[index],
+                    region: regions[index]
+                )
+            )
+        }
+        
+        return companies
     }
 }

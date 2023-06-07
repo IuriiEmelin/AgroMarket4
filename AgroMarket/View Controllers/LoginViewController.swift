@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    private let users = User.getUsers()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +30,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
-        let users = User.getUsers()
         guard let username = usernameField.text, !username.isEmpty,
         let password = passwordField.text, !password.isEmpty else {
             showAlert(title: "Ошибка", message: "Введите логин и пароль")
@@ -61,8 +62,9 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowCategoryList",
            let tabBarController = segue.destination as? TabBarController,
-           let user = sender as? User {
-            tabBarController.user = user
+           let currentUser = sender as? User {
+            tabBarController.currentUser = currentUser
+            tabBarController.users = users
         }
     }
 }

@@ -8,12 +8,48 @@
 import UIKit
 
 class ProductsListViewController: UITableViewController {
+    
+    var users: [User]!
+    var currentUser: User?
+    var category: String!
+    var offers: [Offer]!
+    var offersInCurrentCategory: [Offer] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = category
+        
+        for offer in offers {
+            if offer.product.category == category {
+                offersInCurrentCategory.append(offer)
+            }
+        }
+        offersInCurrentCategory.sort {
+            $0.product.name < $1.product.name
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        offersInCurrentCategory.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        let offer = offersInCurrentCategory[indexPath.row]
+        
+        var company = ""
+        for user in users {
+            if user.id == offer.userID {
+                company = user.company.name
+            }
+        }
+        
+        content.text = "\(offer.product.name) (\(company))"
+        content.secondaryText = "Цена: \(offer.price)\nКоличество: \(offer.quantity)"
+        cell.contentConfiguration = content
+        
         return cell
     }
 }

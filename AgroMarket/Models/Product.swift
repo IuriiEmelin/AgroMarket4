@@ -4,80 +4,54 @@
 //
 //  Created by Guselnikov Gordey on 6/6/23.
 //
+import Foundation
 
 struct Product {
-    
     let name: String
-    let price: Int
-    let quantity: Int
-    let category: Category
-    let company: Company
+    let category: String
 }
 
-enum Category: String, CaseIterable {
-    case meat = "Мясо"
-    case fruits = "Фрукты"
-    case vegetables = "Овощи"
+struct Offer {
+    let product: Product
+    let price: Int
+    let quantity: Int
+    let userID: Int
+    
+    static var categories: [String] = []
 }
 
 extension Product {
-    
     static func getProducts() -> [Product] {
-        
         var products: [Product] = []
-
-        let meatNames = DataStorage.shared.meatNames
-        let fruitNames = DataStorage.shared.fruitNames
-        let vegetableNames = DataStorage.shared.vegetableNames
-        let companies = DataStorage.shared.companies
         
-        for meatName in meatNames {
-            let meatProduct = Product(name: meatName,
-                                      price: Int.random(in: 100...10000),
-                                      quantity: Int.random(in: 0...1000),
-                                      category: .meat,
-                                      company: companies.randomElement() ?? Company(companyName: "unknown", region: "unknown", type: .resale))
-            products.append(meatProduct)
+        for (category, names) in DataStorage.shared.products {
+            Offer.categories.append(category)
+            for name in names {
+                products.append(Product(name: name, category: category))
+            }
         }
-        
-        for fruitName in fruitNames {
-            let fruitProduct = Product(name: fruitName,
-                                       price: Int.random(in: 100...10000),
-                                       quantity: Int.random(in: 0...1000),
-                                       category: .fruits,
-                                       company: companies.randomElement() ?? Company(companyName: "unknown", region: "unknown", type: .resale))
-            products.append(fruitProduct)
-        }
-        
-        for vegetableName in vegetableNames {
-            let vegetableProduct = Product(name: vegetableName,
-                                           price: Int.random(in: 100...10000),
-                                           quantity: Int.random(in: 0...1000),
-                                           category: .vegetables,
-                                           company: companies.randomElement() ?? Company(companyName: "unknown", region: "unknown", type: .resale))
-            products.append(vegetableProduct)
-        }
-        
+        Offer.categories.sort()
         return products
     }
 }
 
-// Enum for Pictures
-enum Picture: String, CaseIterable {
-    case beef = "beef"
-    case lamb = "lamb"
-    case poultry = "poultry"
-    case apricot = "apricot"
-    case pear = "pear"
-    case plum = "plum"
-    case carrot = "carrot"
-    case tomato = "tomato"
-    case onion = "onion"
-}
-
-// Enum for Pictures
-enum CategoryPicture: String {
-    case meat = "meat"
-    case fruits = "fruits"
-    case vegetables = "vegetables"
+extension Offer {
+    static func getOffers() -> [Offer] {
+        let products = Product.getProducts().shuffled()
+        let users = User.getUsers().shuffled()
+        
+        var offers: [Offer] = []
+        
+        for index in 0..<products.count {
+            let offer = Offer(
+                product: products[index],
+                price: Int.random(in: 100...1000),
+                quantity: Int.random(in: 100...1000),
+                userID: users[Int.random(in: 0..<users.count)].id
+            )
+            offers.append(offer)        
+        }
+    
+        return offers
+    }
 }
