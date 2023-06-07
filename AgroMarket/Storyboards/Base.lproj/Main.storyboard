@@ -23,7 +23,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                 <connections>
                                     <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXm-MD-nPI"/>
-                                    <segue destination="RcN-r4-5ff" kind="show" identifier="ShowCategoryList" id="dte-7f-AXe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-Bw-EiN">
@@ -88,6 +87,7 @@
                     <connections>
                         <outlet property="passwordField" destination="ujF-jj-2eq" id="Kit-aL-SPA"/>
                         <outlet property="usernameField" destination="orf-pq-khw" id="Jo7-hu-hNy"/>
+                        <segue destination="RcN-r4-5ff" kind="show" identifier="ShowCategoryList" id="3Ty-VC-I84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

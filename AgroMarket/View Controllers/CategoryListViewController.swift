@@ -9,7 +9,6 @@ import UIKit
 
 final class CategoryListViewController: UITableViewController {
     
-    var currentUser: User?
     var products: [Product]!
     
     override func viewDidLoad() {

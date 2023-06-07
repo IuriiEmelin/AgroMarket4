@@ -31,3 +31,12 @@ struct Company {
     let region: String
     let type: CompanyType
 }
+
+extension User {
+    static func getUsers() -> [User] {
+        return [
+            User(username: "seller1", password: "pass1", type: .seller, company: Company(companyName: "Компания1", region: "Москва", type: .meat)),
+            User(username: "buyer1", password: "pass2", type: .buyer, company: Company(companyName: "Компания2", region: "Санкт-Петербург", type: .resale))
+        ]
+    }
+}
