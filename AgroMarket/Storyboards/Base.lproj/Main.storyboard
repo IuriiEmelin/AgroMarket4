@@ -18,18 +18,18 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-fL-Y6r">
                                 <rect key="frame" x="160" y="581" width="73" height="35"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                 <connections>
-                                    <segue destination="RcN-r4-5ff" kind="show" id="dte-7f-AXe"/>
+                                    <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXm-MD-nPI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-Bw-EiN">
-                                <rect key="frame" x="302" y="783" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-Bw-EiN">
+                                <rect key="frame" x="302" y="793" width="75" height="35"/>
+                                <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="О нас"/>
                                 <connections>
                                     <segue destination="ZQg-3r-lB4" kind="show" id="4lJ-F1-cQc"/>
                                 </connections>
@@ -44,22 +44,51 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-9B-4Y4">
+                                <rect key="frame" x="100" y="626" width="193" height="35"/>
+                                <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
+                                <connections>
+                                    <action selector="didTapForgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohg-OY-OQA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Агро Маркет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFv-NW-qJq">
+                                <rect key="frame" x="130" y="113" width="133" height="34"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="34"/>
+                                <color key="textColor" red="0.25523666935835176" green="0.40353173324742264" blue="0.2408475787592477" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.74756362757731964" green="0.73406155178519583" blue="0.65149919353460128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFv-NW-qJq" secondAttribute="trailing" constant="130" id="0Ak-8T-6cM"/>
                             <constraint firstItem="orf-pq-khw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="18W-Ab-S3q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oU4-9B-4Y4" secondAttribute="trailing" constant="100" id="2lg-Pe-92O"/>
                             <constraint firstItem="kUo-fL-Y6r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="3k1-Q4-NVM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUo-fL-Y6r" secondAttribute="trailing" constant="160" id="6dv-Tf-A3S"/>
                             <constraint firstItem="orf-pq-khw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Dc9-uu-cqd"/>
                             <constraint firstItem="ujF-jj-2eq" firstAttribute="top" secondItem="orf-pq-khw" secondAttribute="bottom" constant="30" id="E5n-w3-xsq"/>
                             <constraint firstItem="kUo-fL-Y6r" firstAttribute="top" secondItem="ujF-jj-2eq" secondAttribute="bottom" constant="140" id="Hr8-PG-DSL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ujF-jj-2eq" secondAttribute="trailing" constant="100" id="QSz-Qc-Sam"/>
+                            <constraint firstItem="oU4-9B-4Y4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Uhv-Io-Jnn"/>
+                            <constraint firstItem="KFv-NW-qJq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="YgZ-bf-y8m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rj8-Bw-EiN" secondAttribute="trailing" constant="16" id="dm8-S5-TxJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="orf-pq-khw" secondAttribute="trailing" constant="100" id="h6t-fF-Tp6"/>
                             <constraint firstItem="ujF-jj-2eq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="qpc-HS-N4y"/>
+                            <constraint firstItem="oU4-9B-4Y4" firstAttribute="top" secondItem="kUo-fL-Y6r" secondAttribute="bottom" constant="10" id="qyA-el-nQ5"/>
+                            <constraint firstItem="rj8-Bw-EiN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="tWf-EQ-v0N"/>
+                            <constraint firstItem="rj8-Bw-EiN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="302" id="x6E-ht-SIt"/>
+                            <constraint firstItem="KFv-NW-qJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zCG-Eg-SBd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HXA-3C-R5z"/>
+                    <connections>
+                        <outlet property="passwordField" destination="ujF-jj-2eq" id="Kit-aL-SPA"/>
+                        <outlet property="usernameField" destination="orf-pq-khw" id="Jo7-hu-hNy"/>
+                        <segue destination="RcN-r4-5ff" kind="show" identifier="ShowCategoryList" id="3Ty-VC-I84"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="8675.5725190839694" y="-853.52112676056345"/>
         </scene>
-        <!--Category-->
+        <!--Категория-->
         <scene sceneID="Q69-Kt-doV">
             <objects>
                 <tableViewController id="Nlg-Za-nAo" customClass="CategoryListViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,9 +175,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="bd6-Y6-crx" kind="show" id="r1G-6a-glH"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -156,7 +182,10 @@
                             <outlet property="delegate" destination="Nlg-Za-nAo" id="Dzj-OK-Nxt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Category" id="IT4-J0-BvT"/>
+                    <navigationItem key="navigationItem" title="Категория" id="IT4-J0-BvT"/>
+                    <connections>
+                        <segue destination="bd6-Y6-crx" kind="show" identifier="ShowProductsScreen" id="eXP-fU-QNu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-i1-r12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,11 +267,11 @@
             </objects>
             <point key="canvasLocation" x="3717" y="12"/>
         </scene>
-        <!--Category-->
+        <!--Категория-->
         <scene sceneID="y8c-Wp-7RN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gdm-yB-NqG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Category" id="h81-ZI-RnU"/>
+                    <tabBarItem key="tabBarItem" title="Категория" id="h81-ZI-RnU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hEE-kc-wWQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
@@ -262,9 +291,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

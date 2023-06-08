@@ -11,13 +11,41 @@ final class DataStorage {
     
     static let shared = DataStorage()
     
-    let categories = ["Мясо" , "Фрукты", "Овощи"]
+    // Users
+    let usernames = [
+        "seller1",
+        "buyer1"
+    ]
     
-    let meatNames = ["Говядина", "Баранина", "Птица"]
+    let passwords = [
+        "pass1",
+        "pass2"
+    ]
     
-    let fruitNames = ["Абрикос", "Груша", "Слива"]
+    // Companies
+    let companyNames = [
+        "Газ-мяс",
+        "Агро"
+    ]
     
-    let vegetableNames = ["Морковь", "Помидор", "Лук"]
+    let regions = [
+        "Москва",
+        "Санкт-Петербург",
+    ]
+    
+    // Products
+    let products = [
+        "Мясо": [
+            "Говядина",
+            "Баранина",
+            "Птица"
+        ],
+        "Овощи": [
+            "Морковь",
+            "Помидоры",
+            "Лук"
+        ]
+    ]
     
     private init() {}
 }
