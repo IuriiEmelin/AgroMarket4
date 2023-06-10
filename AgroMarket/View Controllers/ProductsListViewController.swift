@@ -32,7 +32,7 @@ final class ProductsListViewController: UITableViewController {
         }
     }
     
-    // MARK: - CategoryListViewControllerDataSource
+    // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         offersInCurrentCategory.count
     }
@@ -59,7 +59,7 @@ final class ProductsListViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - CategoryListViewControllerDelegate
+    // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         80
     }

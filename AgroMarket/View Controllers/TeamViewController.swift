@@ -9,12 +9,14 @@ import UIKit
 
 final class TeamViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var Yuriy: UIImageView!
     @IBOutlet weak var Gamzat: UIImageView!
     @IBOutlet weak var Gordey: UIImageView!
     @IBOutlet weak var Alexey: UIImageView!
     @IBOutlet weak var Daniil: UIImageView!
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         Yuriy.layer.cornerRadius = Yuriy.frame.width / 3
         Yuriy.clipsToBounds = true

@@ -9,15 +9,18 @@ import UIKit
 
 final class TabBarController: UITabBarController {
 
+    // MARK: - Properties
     var users: [User]!
     var currentUser: User?
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         transferData()
     }
     
+    // MARK: - Private Properties
     private func transferData() {
         guard let viewControllers else { return }
         guard let categoryNavigationController = viewControllers.first as? UINavigationController else { return }

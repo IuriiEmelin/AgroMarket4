@@ -16,7 +16,7 @@ final class CategoryListViewController: UITableViewController {
     // MARK: - Private Properties
     private let offers = Offer.getOffers()
     
-    // MARK: - ??
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let category = sender as? String else { return }
         guard let productsListVC = segue.destination as? ProductsListViewController else { return }
@@ -27,7 +27,7 @@ final class CategoryListViewController: UITableViewController {
         productsListVC.offers = offers
     }
     
-    // MARK: - CategoryListViewControllerDataSource
+    // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Offer.categories.count
     }
@@ -45,7 +45,7 @@ final class CategoryListViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - CategoryListViewControllerDelegate
+    // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ShowProductsScreen", sender: Offer.categories[indexPath.row])
     }

@@ -16,7 +16,7 @@ final class LoginViewController: UIViewController {
     // MARK: - Private Properties
     private let users = User.getUsers()
     
-    // MARK: - ??
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowCategoryList" {
             guard let tabBarController = segue.destination as? TabBarController else { return }
