@@ -271,7 +271,9 @@
         <scene sceneID="y8c-Wp-7RN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gdm-yB-NqG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Категория" id="h81-ZI-RnU"/>
+                    <tabBarItem key="tabBarItem" title="Категория" id="h81-ZI-RnU">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hEE-kc-wWQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>

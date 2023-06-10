@@ -30,6 +30,7 @@ class ProductsListViewController: UITableViewController {
         }
     }
     
+    // MARK: - CategoryListViewControllerDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         offersInCurrentCategory.count
     }
@@ -37,19 +38,27 @@ class ProductsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let offer = offersInCurrentCategory[indexPath.row]
         
+        let offer = offersInCurrentCategory[indexPath.row]
         var company = ""
+        let productName = offer.product.name
+        
         for user in users {
             if user.id == offer.userID {
                 company = user.company.name
             }
         }
         
-        content.text = "\(offer.product.name) (\(company))"
+        content.text = "\(productName) (\(company))"
         content.secondaryText = "Цена: \(offer.price)\nКоличество: \(offer.quantity)"
+        content.image = UIImage(named: "\(productName)")
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    // MARK: - CategoryListViewControllerDelegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
     }
 }

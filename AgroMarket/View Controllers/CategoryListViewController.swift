@@ -23,6 +23,7 @@ final class CategoryListViewController: UITableViewController {
         productsListVC.offers = offers
     }
     
+    // MARK: - CategoryListViewControllerDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Offer.categories.count
     }
@@ -30,15 +31,22 @@ final class CategoryListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "сategory", for: indexPath)
         var content = cell.defaultContentConfiguration()
+        let category = Offer.categories[indexPath.row]
         
-        content.text = Offer.categories[indexPath.row]
+        content.text = category
+        content.image = UIImage(named: "\(category)")
         cell.contentConfiguration = content
         
         return cell
     }
     
+    // MARK: - CategoryListViewControllerDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ShowProductsScreen", sender: Offer.categories[indexPath.row])
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
     }
 }
 
