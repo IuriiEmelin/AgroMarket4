@@ -7,14 +7,16 @@
 
 import UIKit
 
-class ProductsListViewController: UITableViewController {
+final class ProductsListViewController: UITableViewController {
     
+    // MARK: - Properties
     var users: [User]!
     var currentUser: User?
     var category: String!
     var offers: [Offer]!
     var offersInCurrentCategory: [Offer] = []
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
