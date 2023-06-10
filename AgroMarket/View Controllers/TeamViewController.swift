@@ -7,16 +7,12 @@
 
 import UIKit
 
-class TeamViewController: UIViewController {
+final class TeamViewController: UIViewController {
 
     @IBOutlet weak var Yuriy: UIImageView!
-    
     @IBOutlet weak var Gamzat: UIImageView!
-    
     @IBOutlet weak var Gordey: UIImageView!
-    
     @IBOutlet weak var Alexey: UIImageView!
-    
     @IBOutlet weak var Daniil: UIImageView!
     
     override func viewDidLoad() {
