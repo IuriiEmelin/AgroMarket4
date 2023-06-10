@@ -9,14 +9,18 @@ import UIKit
 
 final class CategoryListViewController: UITableViewController {
     
+    // MARK: - Properties
     var users: [User]!
     var currentUser: User?
     
+    // MARK: - Private Properties
     private let offers = Offer.getOffers()
     
+    // MARK: - ??
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let category = sender as? String else { return }
         guard let productsListVC = segue.destination as? ProductsListViewController else { return }
+        
         productsListVC.users = users
         productsListVC.currentUser = currentUser
         productsListVC.category = category
@@ -31,6 +35,7 @@ final class CategoryListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "сategory", for: indexPath)
         var content = cell.defaultContentConfiguration()
+        
         let category = Offer.categories[indexPath.row]
         
         content.text = category
