@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3T8-Kj-WC8">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,74 +13,73 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uHR-Zg-1BZ">
+                                <rect key="frame" x="40" y="175" width="240" height="98"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orf-pq-khw">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujF-jj-2eq">
+                                        <rect key="frame" x="0.0" y="64" width="240" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Агро Маркет" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFv-NW-qJq">
+                                <rect key="frame" x="50.5" y="84" width="219" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-fL-Y6r">
-                                <rect key="frame" x="160" y="581" width="73" height="35"/>
-                                <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="123.5" y="293" width="73" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                 <connections>
                                     <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXm-MD-nPI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-9B-4Y4">
+                                <rect key="frame" x="107.5" y="332.5" width="105.5" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapForgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohg-OY-OQA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj8-Bw-EiN">
-                                <rect key="frame" x="302" y="793" width="75" height="35"/>
-                                <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="125.5" y="513.5" width="69.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="О нас"/>
                                 <connections>
                                     <segue destination="ZQg-3r-lB4" kind="show" id="4lJ-F1-cQc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujF-jj-2eq">
-                                <rect key="frame" x="100" y="407" width="193" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orf-pq-khw">
-                                <rect key="frame" x="100" y="343" width="193" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-9B-4Y4">
-                                <rect key="frame" x="100" y="626" width="193" height="35"/>
-                                <color key="tintColor" red="0.2552366694" green="0.40353173320000002" blue="0.24084757879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
-                                <connections>
-                                    <action selector="didTapForgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohg-OY-OQA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Агро Маркет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFv-NW-qJq">
-                                <rect key="frame" x="130" y="113" width="133" height="34"/>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="34"/>
-                                <color key="textColor" red="0.25523666935835176" green="0.40353173324742264" blue="0.2408475787592477" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.74756362757731964" green="0.73406155178519583" blue="0.65149919353460128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFv-NW-qJq" secondAttribute="trailing" constant="130" id="0Ak-8T-6cM"/>
-                            <constraint firstItem="orf-pq-khw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="18W-Ab-S3q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oU4-9B-4Y4" secondAttribute="trailing" constant="100" id="2lg-Pe-92O"/>
-                            <constraint firstItem="kUo-fL-Y6r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="3k1-Q4-NVM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUo-fL-Y6r" secondAttribute="trailing" constant="160" id="6dv-Tf-A3S"/>
-                            <constraint firstItem="orf-pq-khw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Dc9-uu-cqd"/>
-                            <constraint firstItem="ujF-jj-2eq" firstAttribute="top" secondItem="orf-pq-khw" secondAttribute="bottom" constant="30" id="E5n-w3-xsq"/>
-                            <constraint firstItem="kUo-fL-Y6r" firstAttribute="top" secondItem="ujF-jj-2eq" secondAttribute="bottom" constant="140" id="Hr8-PG-DSL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ujF-jj-2eq" secondAttribute="trailing" constant="100" id="QSz-Qc-Sam"/>
-                            <constraint firstItem="oU4-9B-4Y4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Uhv-Io-Jnn"/>
-                            <constraint firstItem="KFv-NW-qJq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="YgZ-bf-y8m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rj8-Bw-EiN" secondAttribute="trailing" constant="16" id="dm8-S5-TxJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="orf-pq-khw" secondAttribute="trailing" constant="100" id="h6t-fF-Tp6"/>
-                            <constraint firstItem="ujF-jj-2eq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="qpc-HS-N4y"/>
-                            <constraint firstItem="oU4-9B-4Y4" firstAttribute="top" secondItem="kUo-fL-Y6r" secondAttribute="bottom" constant="10" id="qyA-el-nQ5"/>
-                            <constraint firstItem="rj8-Bw-EiN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="tWf-EQ-v0N"/>
-                            <constraint firstItem="rj8-Bw-EiN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="302" id="x6E-ht-SIt"/>
-                            <constraint firstItem="KFv-NW-qJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zCG-Eg-SBd"/>
+                            <constraint firstItem="KFv-NW-qJq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hU-Hi-5rO"/>
+                            <constraint firstItem="oU4-9B-4Y4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FM3-7X-glp"/>
+                            <constraint firstItem="uHR-Zg-1BZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="Ozq-2p-eeM">
+                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="uHR-Zg-1BZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="P0W-g8-u3o"/>
+                            <constraint firstItem="kUo-fL-Y6r" firstAttribute="top" secondItem="uHR-Zg-1BZ" secondAttribute="bottom" constant="20" id="PI6-m6-WTU"/>
+                            <constraint firstItem="oU4-9B-4Y4" firstAttribute="top" secondItem="kUo-fL-Y6r" secondAttribute="bottom" constant="5" id="Scw-ev-JQG"/>
+                            <constraint firstItem="KFv-NW-qJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tea-Kh-jiH"/>
+                            <constraint firstItem="kUo-fL-Y6r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="acr-PI-dza"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rj8-Bw-EiN" secondAttribute="bottom" constant="20" id="qZr-i5-2Vq"/>
+                            <constraint firstItem="rj8-Bw-EiN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qso-RM-C5C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uHR-Zg-1BZ" secondAttribute="trailing" constant="40" id="zQT-FS-oww"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HXA-3C-R5z"/>
@@ -99,7 +98,7 @@
             <objects>
                 <viewController id="ZQg-3r-lB4" customClass="TeamViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iKh-dI-cxK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="TZX-tm-xCR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,7 +114,7 @@
             <objects>
                 <viewController id="ery-gy-64D" customClass="AccountViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YEK-Dp-l57">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="yPC-a9-7bR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,7 +131,7 @@
             <objects>
                 <viewController id="xnM-93-Z6A" customClass="ProductDetailsViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vt1-Sn-zAf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="s1d-l1-vRH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,7 +147,7 @@
             <objects>
                 <viewController id="gFI-MQ-dho" customClass="NewProductViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUN-L5-seK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xPv-nb-Q7K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -164,15 +163,15 @@
             <objects>
                 <tableViewController id="Nlg-Za-nAo" customClass="CategoryListViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="XMJ-fD-u48">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="сategory" id="UBQ-DP-kNi">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UBQ-DP-kNi" id="rUj-5Y-yne">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -196,15 +195,15 @@
             <objects>
                 <tableViewController id="bd6-Y6-crx" customClass="ProductsListViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ABP-8y-S7f">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Sh3-QR-Gpu">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sh3-QR-Gpu" id="fVh-N0-Krd">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -235,7 +234,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3T8-Kj-WC8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Ak-YT-sX6">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -271,10 +270,12 @@
         <scene sceneID="y8c-Wp-7RN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gdm-yB-NqG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Категория" id="h81-ZI-RnU"/>
+                    <tabBarItem key="tabBarItem" title="Категория" id="h81-ZI-RnU">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hEE-kc-wWQ">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

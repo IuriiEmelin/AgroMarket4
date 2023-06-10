@@ -7,32 +7,45 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    // MARK: - Private Properties
     private let users = User.getUsers()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        usernameField.returnKeyType = .done
-        passwordField.returnKeyType = .done
+    // MARK: - ??
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCategoryList" {
+            guard let tabBarController = segue.destination as? TabBarController else { return }
+            guard let currentUser = sender as? User else { return }
+            
+            tabBarController.currentUser = currentUser
+            tabBarController.users = users
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
+    // MARK: - IBActions
     @IBAction func didTapForgotPassword() {
-        showAlert(title: "Восстановление пароля", message: "Обратитесь в службу поддержки за новым паролем")
+        showAlert(
+            title: "Восстановление пароля",
+            message: "Обратитесь в службу поддержки за новым паролем"
+        )
     }
     
     @IBAction func loginButtonTapped() {
-        guard let username = usernameField.text, !username.isEmpty,
-        let password = passwordField.text, !password.isEmpty else {
-            showAlert(title: "Ошибка", message: "Введите логин и пароль")
+        guard let username = usernameField.text, let password = passwordField.text else {
+            showAlert(
+                title: "Ошибка",
+                message: "Введите логин и пароль"
+            )
             return
         }
         
@@ -46,25 +59,28 @@ class LoginViewController: UIViewController {
         }
         
         if let user = foundUser {
-            self.performSegue(withIdentifier: "ShowCategoryList", sender: user)
+            performSegue(withIdentifier: "ShowCategoryList", sender: user)
         } else {
-            showAlert(title: "Ошибка", message: "Неверный логин или пароль")
+            showAlert(
+                title: "Ошибка",
+                message: "Неверный логин или пароль",
+                textField: passwordField
+            )
         }
     }
     
-    
-    func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowCategoryList",
-           let tabBarController = segue.destination as? TabBarController,
-           let currentUser = sender as? User {
-            tabBarController.currentUser = currentUser
-            tabBarController.users = users
+    // MARK: - Private Methods
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
         }
+
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
