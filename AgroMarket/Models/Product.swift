@@ -46,9 +46,9 @@ extension Offer {
         
         var offers: [Offer] = []
         
-        for index in 0..<products.count {
+        for _ in 1...10 {
             let offer = Offer(
-                product: products[index],
+                product: products[Int.random(in: 0..<products.count)],
                 price: Int.random(in: 100...500),
                 quantity: Int.random(in: 100...1000),
                 userID: users[Int.random(in: 0..<users.count)].id

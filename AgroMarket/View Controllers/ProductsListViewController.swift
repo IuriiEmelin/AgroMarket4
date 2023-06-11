@@ -14,7 +14,12 @@ final class ProductsListViewController: UITableViewController {
     var currentUser: User?
     var category: String!
     var offers: [Offer]!
-    var offersInCurrentCategory: [Offer] = []
+    
+    
+    // MARK: - Private Properties
+    private var offersInCurrentCategory: [Offer] = []
+    private var offersInCurrentSection: [Offer] = []
+    private var offerTypes: [String] = []
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -30,6 +35,8 @@ final class ProductsListViewController: UITableViewController {
         offersInCurrentCategory.sort {
             $0.product.name < $1.product.name
         }
+        
+        offerTypes = getOfferTypes()
     }
     
     // MARK: - Navigation
@@ -43,15 +50,26 @@ final class ProductsListViewController: UITableViewController {
     }
     
     // MARK: - UITableViewDataSource
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        offerTypes.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        offerTypes[section]
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        offersInCurrentCategory.count
+        offersInCurrentSection = getOffersIn(section: section)
+        
+        return offersInCurrentSection.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
-        let offer = offersInCurrentCategory[indexPath.row]
+        offersInCurrentSection = getOffersIn(section: indexPath.section)
+        let offer = offersInCurrentSection[indexPath.row]
         var company = ""
         let productName = offer.product.name
         
@@ -67,6 +85,29 @@ final class ProductsListViewController: UITableViewController {
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    private func getOfferTypes() -> [String] {
+        var offerTypes: [String] = []
+        for offer in offersInCurrentCategory {
+            if !offerTypes.contains(offer.product.name) {
+                offerTypes.append(offer.product.name)
+            }
+        }
+        offerTypes.sort()
+        return offerTypes
+    }
+    
+    private func getOffersIn(section: Int) -> [Offer] {
+        var offers: [Offer] = []
+        
+        for offer in offersInCurrentCategory {
+            if offer.product.name == offerTypes[section] {
+                offers.append(offer)
+            }
+        }
+        
+        return offers
     }
     
     // MARK: - UITableViewDelegate
