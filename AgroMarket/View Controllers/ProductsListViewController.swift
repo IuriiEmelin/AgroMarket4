@@ -116,6 +116,7 @@ final class ProductsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowDetailsScreen", sender: offersInCurrentCategory[indexPath.row])
+        offersInCurrentSection = getOffersIn(section: indexPath.section)
+        performSegue(withIdentifier: "ShowDetailsScreen", sender: offersInCurrentSection[indexPath.row])
     }
 }
