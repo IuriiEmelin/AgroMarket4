@@ -69,7 +69,7 @@ extension Company {
             companies.append(
                 Company(
                     name: companyNames[index],
-                    region: regions[index]
+                    region: regions[Int.random(in: 0..<regions.count)]
                 )
             )
         }
