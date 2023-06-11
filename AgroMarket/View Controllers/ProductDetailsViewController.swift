@@ -37,7 +37,6 @@ final class ProductDetailsViewController: UIViewController {
     // MARK: - Private Methods
     private func updateUI() {
         guard let category else { return }
-        var company = ""
         var offerOwner: User!
         let productName = currentOffer.product.name
         

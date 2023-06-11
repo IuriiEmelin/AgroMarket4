@@ -22,6 +22,7 @@ struct Offer {
     }
     
     static var categories: [String] = []
+    static var offers: [Offer] = []
 }
 
 extension Product {
@@ -44,8 +45,6 @@ extension Offer {
         let products = Product.getProducts().shuffled()
         let users = User.getUsers().shuffled()
         
-        var offers: [Offer] = []
-        
         for _ in 1...20 {
             let offer = Offer(
                 product: products[Int.random(in: 0..<products.count)],
@@ -57,5 +56,9 @@ extension Offer {
         }
     
         return offers
+    }
+    
+    static func addOffer(_ newOffer: Offer) {
+        offers.append(newOffer)
     }
 }

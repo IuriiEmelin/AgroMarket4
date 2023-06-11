@@ -206,31 +206,78 @@
                     <view key="view" contentMode="scaleToFill" id="YEK-Dp-l57">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0nw-iM-Jh3">
+                                <rect key="frame" x="16" y="104" width="288" height="87.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="gie-IE-fzh">
+                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="87.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Компания:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9X-de-LXb">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR4-nH-4Dd">
+                                                <rect key="frame" x="0.0" y="33.5" width="74" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Эл. почта:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoV-EW-R0c">
+                                                <rect key="frame" x="0.0" y="67" width="80.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="psq-hN-Abc">
+                                        <rect key="frame" x="133.5" y="0.0" width="154.5" height="87.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZv-rw-Hlx">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phoneNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-1z-2Tp">
+                                                <rect key="frame" x="0.0" y="33.5" width="109.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH3-Q8-EcA">
+                                                <rect key="frame" x="0.0" y="67" width="40.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yPC-a9-7bR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yPC-a9-7bR" firstAttribute="trailing" secondItem="0nw-iM-Jh3" secondAttribute="trailing" constant="16" id="HD1-wA-QUu"/>
+                            <constraint firstItem="0nw-iM-Jh3" firstAttribute="top" secondItem="yPC-a9-7bR" secondAttribute="top" constant="40" id="OJr-Ts-k71"/>
+                            <constraint firstItem="0nw-iM-Jh3" firstAttribute="leading" secondItem="yPC-a9-7bR" secondAttribute="leading" constant="16" id="k38-Je-RvF"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" id="Fd8-SD-AVp"/>
+                    <tabBarItem key="tabBarItem" title="Личный кабинет" image="person.fill" catalog="system" id="Fd8-SD-AVp"/>
                     <navigationItem key="navigationItem" title="Account" id="WDb-ag-v8D"/>
+                    <connections>
+                        <outlet property="compLabel" destination="TZv-rw-Hlx" id="cAX-FC-H4H"/>
+                        <outlet property="emailLabel" destination="pH3-Q8-EcA" id="1lf-XU-u0K"/>
+                        <outlet property="phoneNumberLabel" destination="TaQ-1z-2Tp" id="GMy-oA-anW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVm-Ej-zB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3716" y="835"/>
-        </scene>
-        <!--New Product View Controller-->
-        <scene sceneID="fkZ-Rj-QHK">
-            <objects>
-                <viewController id="M4C-dP-XuA" customClass="NewProductViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gv3-7f-Dzb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="pQP-rk-KnJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fW8-CY-13z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zca-F8-3y5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7729" y="-278"/>
         </scene>
         <!--Product Details View Controller-->
         <scene sceneID="AqT-d8-8RI">
@@ -411,7 +458,7 @@
                     <navigationItem key="navigationItem" title="Products" id="EAA-Jn-VsS">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="WWq-eq-6QF">
                             <connections>
-                                <segue destination="M4C-dP-XuA" kind="show" id="DJP-Nt-ofn"/>
+                                <segue destination="4Ey-M9-f31" kind="showDetail" id="wYi-Gl-SyS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -481,6 +528,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiA-Xt-YEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4497" y="12"/>
+        </scene>
+        <!--New Product View Controller-->
+        <scene sceneID="Dhj-Oy-din">
+            <objects>
+                <viewController id="4Ey-M9-f31" customClass="NewProductViewController" customModule="AgroMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="As1-oc-rJz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-JH-adB">
+                                <rect key="frame" x="160" y="301" width="110" height="103"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-NE-YJj">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0R-AD-75O">
+                                        <rect key="frame" x="0.0" y="69" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-cF-twS">
+                                <rect key="frame" x="160" y="60" width="120" height="226"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ff-xT-9bJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="pfy-HQ-SHW"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMa-Cg-vfi">
+                                        <rect key="frame" x="0.0" y="118" width="120" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="G6Y-8b-mMq"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-1K-ePh">
+                                <rect key="frame" x="95.5" y="444" width="129" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Добавить">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addOffer" destination="4Ey-M9-f31" eventType="touchUpInside" id="f0S-ps-gXq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="38a-rO-z9p">
+                                <rect key="frame" x="16" y="96" width="113.5" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-xw-fil">
+                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-09-JMC">
+                                        <rect key="frame" x="0.0" y="119" width="105.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="trX-ub-Y6A">
+                                <rect key="frame" x="16" y="302" width="111" height="101"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес, кг." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEY-Rk-wGq">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена, руб." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVl-wA-mWY">
+                                        <rect key="frame" x="0.0" y="72" width="110.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ORv-Go-fHd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EfW-JH-adB" firstAttribute="centerY" secondItem="trX-ub-Y6A" secondAttribute="centerY" id="GFt-H6-zxN"/>
+                            <constraint firstItem="EfW-JH-adB" firstAttribute="top" secondItem="0wJ-cF-twS" secondAttribute="bottom" constant="15" id="Haf-ag-JHh"/>
+                            <constraint firstItem="EfW-JH-adB" firstAttribute="leading" secondItem="trX-ub-Y6A" secondAttribute="trailing" constant="33" id="PVI-zl-CID"/>
+                            <constraint firstItem="EfW-JH-adB" firstAttribute="leading" secondItem="0wJ-cF-twS" secondAttribute="leading" id="VtN-7s-ZuS"/>
+                            <constraint firstItem="trX-ub-Y6A" firstAttribute="leading" secondItem="ORv-Go-fHd" secondAttribute="leading" constant="16.000000000000007" id="Yqy-u4-79P"/>
+                            <constraint firstItem="ctb-1K-ePh" firstAttribute="top" secondItem="EfW-JH-adB" secondAttribute="bottom" constant="40" id="aOv-zP-fUO"/>
+                            <constraint firstItem="38a-rO-z9p" firstAttribute="leading" secondItem="ORv-Go-fHd" secondAttribute="leading" constant="16" id="dwr-t3-gW8"/>
+                            <constraint firstItem="ctb-1K-ePh" firstAttribute="centerX" secondItem="As1-oc-rJz" secondAttribute="centerX" id="gMf-Wy-cdI"/>
+                            <constraint firstItem="0wJ-cF-twS" firstAttribute="leading" secondItem="ORv-Go-fHd" secondAttribute="leading" constant="160" id="gU0-yN-L2h"/>
+                            <constraint firstItem="38a-rO-z9p" firstAttribute="top" secondItem="ORv-Go-fHd" secondAttribute="top" constant="96" id="l5T-uP-p3o"/>
+                            <constraint firstItem="EfW-JH-adB" firstAttribute="width" secondItem="0wJ-cF-twS" secondAttribute="width" constant="-10" id="lwp-KO-ZtO"/>
+                            <constraint firstItem="0wJ-cF-twS" firstAttribute="top" secondItem="ORv-Go-fHd" secondAttribute="top" constant="60" id="uuL-9f-B7E"/>
+                            <constraint firstItem="ORv-Go-fHd" firstAttribute="trailing" secondItem="0wJ-cF-twS" secondAttribute="trailing" constant="40" id="yqR-b6-nEK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lWC-LD-0ZX"/>
+                    <connections>
+                        <outlet property="categoryPickerView" destination="0Ff-xT-9bJ" id="3Vf-Kp-Hwf"/>
+                        <outlet property="namePickerView" destination="XMa-Cg-vfi" id="ypc-qk-UcS"/>
+                        <outlet property="priceField" destination="w0R-AD-75O" id="gW4-tb-mIc"/>
+                        <outlet property="weightField" destination="yxv-NE-YJj" id="Nkj-Qa-SDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UF-4E-WD1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7729" y="-362"/>
         </scene>
     </scenes>
     <resources>

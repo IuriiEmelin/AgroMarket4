@@ -25,8 +25,10 @@ final class TabBarController: UITabBarController {
         guard let viewControllers else { return }
         guard let categoryNavigationController = viewControllers.first as? UINavigationController else { return }
         guard let categoryListVC = categoryNavigationController.topViewController as? CategoryListViewController else { return }
+        guard let accountVC = viewControllers.last as? AccountViewController else { return }
         
         categoryListVC.currentUser = currentUser
         categoryListVC.users = users
+        accountVC.currentUser = currentUser
     }
 }
