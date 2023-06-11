@@ -32,6 +32,16 @@ final class ProductsListViewController: UITableViewController {
         }
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let productDetailsVC = segue.destination as? ProductDetailsViewController else { return }
+        guard let currentOffer = sender as? Offer else { return }
+        
+        productDetailsVC.currentOffer = currentOffer
+        productDetailsVC.users = users
+        productDetailsVC.category = category
+    }
+    
     // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         offersInCurrentCategory.count
@@ -52,7 +62,7 @@ final class ProductsListViewController: UITableViewController {
         }
         
         content.text = "\(productName) (\(company))"
-        content.secondaryText = "Цена: \(offer.price)\nКоличество: \(offer.quantity)"
+        content.secondaryText = "Стоимость: \(offer.totalPrice) руб. (\(offer.price) руб. за кг.)\nКоличество: \(offer.quantity) кг."
         content.image = UIImage(named: "\(productName)")
         cell.contentConfiguration = content
         
@@ -62,5 +72,9 @@ final class ProductsListViewController: UITableViewController {
     // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         80
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowDetailsScreen", sender: offersInCurrentCategory[indexPath.row])
     }
 }

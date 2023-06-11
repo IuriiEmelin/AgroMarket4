@@ -17,6 +17,10 @@ struct Offer {
     let quantity: Int
     let userID: Int
     
+    var totalPrice: Int {
+        price * quantity
+    }
+    
     static var categories: [String] = []
 }
 
@@ -45,7 +49,7 @@ extension Offer {
         for index in 0..<products.count {
             let offer = Offer(
                 product: products[index],
-                price: Int.random(in: 100...1000),
+                price: Int.random(in: 100...500),
                 quantity: Int.random(in: 100...1000),
                 userID: users[Int.random(in: 0..<users.count)].id
             )

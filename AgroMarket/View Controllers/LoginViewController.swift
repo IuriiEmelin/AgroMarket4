@@ -27,6 +27,7 @@ final class LoginViewController: UIViewController {
         }
     }
     
+    // MARK: - Override Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -34,9 +35,11 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func didTapForgotPassword() {
+        guard let randomUser = users.randomElement() else { return }
+        
         showAlert(
             title: "Восстановление пароля",
-            message: "Обратитесь в службу поддержки за новым паролем"
+            message: "Обратитесь в службу поддержки за новым паролем...\n...\nНу ладно, так и быть скажу:\n\nusername - \(randomUser.username)\npassword - \(randomUser.password)"
         )
     }
     

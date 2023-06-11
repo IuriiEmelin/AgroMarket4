@@ -13,8 +13,8 @@ final class DataStorage {
     
     // Users
     let usernames = [
-        "seller1",
-        "buyer1"
+        "user1",
+        "user2"
     ]
     
     let passwords = [
@@ -22,9 +22,19 @@ final class DataStorage {
         "pass2"
     ]
     
+    let phoneNumbers = [
+        "+7(926)953-46-85",
+        "+7(903)922-33-13"
+    ]
+    
+    let emails = [
+        "parampampam@gmail.com",
+        "tututu@yandex.ru"
+    ]
+    
     // Companies
     let companyNames = [
-        "Газ-мяс",
+        "Сельхозпром",
         "Агро"
     ]
     

@@ -13,6 +13,8 @@ struct User {
     let id: Int
     let type: UserType
     let company: Company
+    let phoneNumber: String
+    let email: String
 }
 
 enum UserType: String, CaseIterable {
@@ -30,7 +32,8 @@ extension User {
         let usernames = DataStorage.shared.usernames
         let passwords = DataStorage.shared.passwords
         let userTypes = UserType.allCases.shuffled()
-        
+        let phoneNumbers = DataStorage.shared.phoneNumbers.shuffled()
+        let emails = DataStorage.shared.emails.shuffled()
         
         
         var users: [User] = []
@@ -43,8 +46,10 @@ extension User {
                 username: usernames[index],
                 password: passwords[index],
                 id: index + 1,
-                type: userTypes[index],
-                company: companies[index]
+                type: userTypes[Int.random(in: 0...1)],
+                company: companies[index],
+                phoneNumber: phoneNumbers[index],
+                email: emails[index]
             )
             users.append(user)
         }
