@@ -23,6 +23,8 @@
 		07E6BB4D2A2E7B0F003D65B8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6BB4C2A2E7B0F003D65B8 /* TabBarController.swift */; };
 		6D9A4D0A2A30B9A200BB803D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A4D092A30B9A200BB803D /* User.swift */; };
 		8FC0E7802A2E8ECC006A2744 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */; };
+		A5C9517F2A34A9D9003A013F /* NewOfferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9517E2A34A9D9003A013F /* NewOfferService.swift */; };
+		A5C951812A34AD2E003A013F /* CategoryNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C951802A34AD2E003A013F /* CategoryNameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		07E6BB4C2A2E7B0F003D65B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6D9A4D092A30B9A200BB803D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		A5C9517E2A34A9D9003A013F /* NewOfferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfferService.swift; sourceTree = "<group>"; };
+		A5C951802A34AD2E003A013F /* CategoryNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				07E6BB462A2E7030003D65B8 /* AccountViewController.swift */,
 				07E6BB482A2E737F003D65B8 /* ProductDetailsViewController.swift */,
 				07E6BB4A2A2E73AC003D65B8 /* NewProductViewController.swift */,
+				A5C951802A34AD2E003A013F /* CategoryNameView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8FC0E77F2A2E8ECC006A2744 /* DataStorage.swift */,
+				A5C9517E2A34A9D9003A013F /* NewOfferService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -222,10 +228,12 @@
 				07E6BB472A2E7030003D65B8 /* AccountViewController.swift in Sources */,
 				8FC0E7802A2E8ECC006A2744 /* DataStorage.swift in Sources */,
 				07E6BB4D2A2E7B0F003D65B8 /* TabBarController.swift in Sources */,
+				A5C9517F2A34A9D9003A013F /* NewOfferService.swift in Sources */,
 				07E6BB4B2A2E73AC003D65B8 /* NewProductViewController.swift in Sources */,
 				07E6BB432A2E6F15003D65B8 /* CategoryListViewController.swift in Sources */,
 				07E6BB242A2E6C5F003D65B8 /* AppDelegate.swift in Sources */,
 				07E6BB452A2E6F69003D65B8 /* ProductsListViewController.swift in Sources */,
+				A5C951812A34AD2E003A013F /* CategoryNameView.swift in Sources */,
 				07E6BB262A2E6C5F003D65B8 /* SceneDelegate.swift in Sources */,
 				07E6BB492A2E737F003D65B8 /* ProductDetailsViewController.swift in Sources */,
 				073CFACA2A2FA7C600D868EC /* Product.swift in Sources */,

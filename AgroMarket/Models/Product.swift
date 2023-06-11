@@ -18,6 +18,7 @@ struct Offer {
     let userID: Int
     
     static var categories: [String] = []
+    static var offers: [Offer] = []
 }
 
 extension Product {
@@ -40,7 +41,9 @@ extension Offer {
         let products = Product.getProducts().shuffled()
         let users = User.getUsers().shuffled()
         
-        var offers: [Offer] = []
+        // TODO: - нужно реализовать массив лотов для всего приложения
+        // сейчас это некорректно, т.к. в виде заглушки
+        //var offers: [Offer] = []
         
         for index in 0..<products.count {
             let offer = Offer(
@@ -53,5 +56,9 @@ extension Offer {
         }
     
         return offers
+    }
+    
+    static func addOffer(_ newOffer: Offer) {
+        offers.append(newOffer)
     }
 }
