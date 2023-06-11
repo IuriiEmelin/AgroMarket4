@@ -10,7 +10,7 @@ import UIKit
 
 class NewProductViewController: UIViewController {
     
-    // MARK: - IB Outlets
+    // MARK: - IBOutlets
     @IBOutlet private weak var categoryPickerView: UIPickerView!
     @IBOutlet private weak var namePickerView: UIPickerView!
     @IBOutlet weak var weightField: UITextField!
@@ -19,24 +19,24 @@ class NewProductViewController: UIViewController {
     var currentCategory = ""
     var currentName = ""
     
-    // MARK: - Private properties
+    // MARK: - Private Properties
     private lazy var categoryPickerModels : [PickerModel] = {
         var models: [PickerModel] = []
-        
+
         for (code, value) in OfferService.categories {
             models.append(.init(code: code, title: value.0, icon: value.1))
         }
-        
+
         return models
     }()
-    
+
     private lazy var namePickerModels : [PickerModel] = {
         var models: [PickerModel] = []
-        
+
         for (code, value) in OfferService.names {
             models.append(.init(code: code, title: value.0, icon: value.1))
         }
-        
+
         return models
     }()
     
