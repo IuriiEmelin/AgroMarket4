@@ -38,7 +38,7 @@ final class LoginViewController: UIViewController {
         guard let randomUser = users.randomElement() else { return }
         
         showAlert(
-            title: "Восстановление пароля",
+            title: "Восстановление пароля.",
             message: "Обратитесь в службу поддержки за новым паролем...\n...\nНу ладно, так и быть скажу:\n\nusername - \(randomUser.username)\npassword - \(randomUser.password)"
         )
     }
